@@ -1,0 +1,4 @@
+<% @posts.each do |post| %>
+  <p><%= User.find(post.user_id).username %></p>
+  <p><%= post.body %></p>
+<% end %>

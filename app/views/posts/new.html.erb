@@ -1,0 +1,13 @@
+<h1>create post</h1>
+
+<%= form_with(model: @post, local: true) do |form| %>
+
+
+  <div>
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
