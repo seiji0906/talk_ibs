@@ -57,3 +57,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development, :test do
   gem 'rspec-rails', '~> 4.0.1'
 end
+
+
+gem 'rails_admin', '~> 2.0'
+
+
+
+
+
