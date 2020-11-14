@@ -1,1 +1,4 @@
-<!-- サイトの説明 -->
+<% @posts.each do |post| %>
+  <p><%= User.find(post.user_id).username %></p>
+  <p><%= link_to post.title, post_path(post) %></p>
+<% end %>
