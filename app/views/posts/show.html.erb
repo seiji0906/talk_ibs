@@ -1,6 +1,17 @@
 <h1>show</h1>
-<p><%= @post.title %></p>
+<p><%= @post.title %></p><%= @post.liked_users.count %>
 <p><%= @post.body %></p>
+
+<h3>いいね件数: <%= @post.likes.count %></h3>
+<% if current_user.already_liked?(@post) %>
+  <%= button_to 'いいねを取り消す', post_like_path(@post), method: :delete %>
+<% else %>
+  <%= button_to 'いいね', post_likes_path(@post) %>
+<% end %>
+<h2>いいねしたユーザー</h2>
+<% @post.liked_users.each do |user| %>
+  <li><%= user.email %></li>
+<% end %>
 
 <p><%= link_to "編集", edit_post_path(@post) %></p>
 <p><%= link_to "投稿を削除", {controller: :posts, action: :destroy}, data: {confirm: "削除しますか？"}, method: :delete %></p>
