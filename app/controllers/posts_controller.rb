@@ -3,6 +3,10 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   def new
     @post = Post.new
   end
@@ -13,6 +17,16 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path
     end
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    @post.update
+    redirect_to posts_path
   end
 
   def posts_params
