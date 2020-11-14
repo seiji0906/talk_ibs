@@ -1,4 +1,5 @@
 <h1>show</h1>
+<p><%= User.find(@post.user_id).username %></p>
 <p><%= @post.body %></p>
 
 <p><%= link_to "一覧へ", posts_path %></p>
