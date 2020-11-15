@@ -2,17 +2,10 @@
 <p><%= @post.title %></p><%= @post.liked_users.count %>
 <p><%= @post.body %></p>
 
-<h3>いいね件数: <%= @post.likes.count %></h3>
-<% if current_user.already_liked?(@post) %>
-  <%= button_to 'いいねを取り消す', post_like_path(@post), method: :delete, remote: true %>
-<% else %>
-  <%= button_to 'いいね', post_likes_path(@post), remote: true %>
-<% end %>
-<h2>いいねしたユーザー</h2>
-<% @post.liked_users.each do |user| %>
-  <li><%= user.email %></li>
-<% end %>
+<div id="likes_buttons_<%= @post.id %>">
+   <%= render partial: 'likes/like', locals: { post: @post} %>
+</div>
 
 <p><%= link_to "編集", edit_post_path(@post) %></p>
 <p><%= link_to "投稿を削除", {controller: :posts, action: :destroy}, data: {confirm: "削除しますか？"}, method: :delete %></p>
-<p><%= link_to "一覧へ", posts_path %></p>
+<p><%= link_to "一覧へ", root_path %></p>

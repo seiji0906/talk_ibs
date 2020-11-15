@@ -1,9 +1,9 @@
 <% if user_signed_in? %>
     <% if post.liked_by?(current_user) %>
-        <p><span>お気に入り解除: </span><%= link_to post.likes.count, post_like_path(post.id, current_user.id), method: :delete, remote: true %></p>
+        <p><%= link_to post.likes.count, post_like_path(post.id, current_user.id), method: :delete, remote: true, class: "fas fa-heart like" %></p>
     <% else %>
-        <p><span>お気に入り登録: </span><%= link_to post.likes.count, post_likes_path(post.id), method: :post, remote: true %></p>
+        <p><%= link_to post.likes.count, post_likes_path(post.id), method: :post, remote: true, class: "far fa-heart unlike" %></p>
     <% end %>
 <% else %>
-    <p><span>お気に入り数: </span><%= post.likes.count %></p>
+    <p><%= link_to post.likes.count, new_user_session_path, class: "far fa-heart unlike" %></p>
 <% end %>
