@@ -8,6 +8,8 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
 
 
   </head>
@@ -15,12 +17,12 @@
   <body>
     <% if current_user %>
       <div>
-        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
       </div>
     <% else %>
       <div>
-        <%= link_to 'ログイン', new_user_session_path %>
-        <%= link_to '新規登録', new_user_registration_path %>
+        <li><%= link_to 'ログイン', new_user_session_path %></li>
+        <li><%= link_to '新規登録', new_user_registration_path %></li>
       </div>
     <% end %>
     <%= yield %>

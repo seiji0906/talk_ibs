@@ -17,10 +17,23 @@
   font-size: 0px;
 }*/
 
+* {
+  font-size: 20px;
+}
+
+li {
+  list-style-type: none;
+  margin: 0 0 0 auto;
+  text-align: right;
+
+}
+
 input[type="text"] {
   width: 97%;
-  height: ;
+  min-height: 25px;
 }
 textarea {
   width: 97%;
+  margin: 20px auto;
+  min-height: 100px;
 }

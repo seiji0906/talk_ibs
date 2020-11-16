@@ -1,5 +1,6 @@
 <% @posts.each do |post| %>
-    <div class="js-modal-open" id="js-post-title-<%= post.id %>">
-      <%= link_to post.title, post_path(post), remote: true %>
+    <div id="js-post-title-<%= post.id %>">
+      <%= link_to post.title, post_path(post), remote: true, class: "js-modal-open" %>
     </div>
+
 <% end %>

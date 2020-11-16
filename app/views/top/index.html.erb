@@ -1,8 +1,9 @@
 <% if user_signed_in? %>
-  <%= link_to "作成", new_post_path, remote: true %>
+  <%= link_to "作成", new_post_path, remote: true, class: "scroll-button" %>
 <% else %>
-  <%= link_to "作成", new_user_session_path %>
+  <%= link_to "作成", new_user_session_path, class: "scroll-button" %>
 <% end %>
+
 <div id="main_contents">
   <%= render partial: 'posts/post' %>
 </div>
