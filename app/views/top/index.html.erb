@@ -1,10 +1,10 @@
-<%= link_to "作成", new_post_path, remote: true %>
+<% if user_signed_in? %>
+  <%= link_to "作成", new_post_path, remote: true %>
+<% else %>
+  <%= link_to "作成", new_user_session_path %>
+<% end %>
 <div id="main_contents">
-    <% @posts.each do |post| %>
-        <div class="js-modal-open" id="js-post-title-<%= post.id %>">
-          <%= link_to post.title, post_path(post), remote: true %>
-        </div>
-  <% end %>
+  <%= render partial: 'posts/post' %>
 </div>
 
 <div class="js-modal">

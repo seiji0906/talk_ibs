@@ -15,11 +15,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(posts_params)
     @post.user_id = current_user.id
-
-    if @post.save
-      redirect_to root_path
-      
-    end
+    @posts = Post.all
+    @post.save
   end
 
   def edit
@@ -35,6 +32,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
   end
+
+  private
 
   def posts_params
     params.require(:post).permit(:title, :body, :user_id)

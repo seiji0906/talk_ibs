@@ -1,9 +1,4 @@
 $(function(){
-    $('.main_contents').html("<%= @post.title %>");
-    $('#modal__content').html("<%= j(render partial: 'posts/show_modal', locals: {post: @post}) %>");
-    $('.js-modal').fadeIn();
-
-    $('.js-modal-close').on('click',function(){
-      $('.js-modal').fadeOut();
-    });   
+  $('.js-modal').fadeOut();
+  $('#main_contents').html("<%= escape_javascript(render 'post') %>")
 });
