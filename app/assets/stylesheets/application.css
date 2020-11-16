@@ -16,3 +16,11 @@
 /** {
   font-size: 0px;
 }*/
+
+input[type="text"] {
+  width: 97%;
+  height: ;
+}
+textarea {
+  width: 97%;
+}

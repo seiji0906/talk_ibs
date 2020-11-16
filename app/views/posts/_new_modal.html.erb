@@ -1,10 +1,10 @@
 <%= form_with(model: @post) do |form| %>
   <div>
-    <%= form.text_field :title, placeholder: "タイトル", width: "70%", maxlength: "100", size: "100x10" %>
+    <%= form.text_field :title, placeholder: "タイトル", maxlength: "100" %>
   </div>
 
   <div>
-    <%= form.text_area :body, placeholder: "内容", width: "70%", maxlength: "1000", size: "148x10" %>
+    <%= form.text_area :body, placeholder: "内容", maxlength: "1000" %>
   </div>
   <div>
     <%= form.submit %>
