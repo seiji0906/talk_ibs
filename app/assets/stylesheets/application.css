@@ -37,3 +37,11 @@ textarea {
   margin: 20px auto;
   min-height: 100px;
 }
+
+.login {
+  margin: 0;
+  padding: 0;
+  background-image: url(login.jpg);
+  background-size: 100% auto;
+  display: inline;
+}
