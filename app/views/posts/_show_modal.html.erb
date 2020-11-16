@@ -10,7 +10,7 @@
 <% if user_signed_in? %>
   <% if current_user.id == @post.user.id %>
     <p><%= link_to "編集", edit_post_path(@post), class: "js-post-edit", remote: true %></p>
-    <p><%= link_to "投稿を削除", {controller: :posts, action: :destroy}, data: {confirm: "削除しますか？"}, method: :delete %></p>
+    <p><%= link_to "投稿を削除", {controller: :posts, action: :destroy}, data: {confirm: "削除しますか？", remote: true}, method: :delete %></p>
   <% else %>
   <% end %>
 <% else %>
