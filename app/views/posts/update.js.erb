@@ -1,0 +1,9 @@
+$(function(){
+    $('#js-post-title').html("<%= @post.title %>");
+    $('#modal__content').html("<%= j(render partial: 'posts/show_modal', locals: {post: @post}) %>");
+    $('.js-modal').fadeIn();
+
+    $('.js-modal-close').on('click',function(){
+      $('.js-modal').fadeOut();
+    });   
+});

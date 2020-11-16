@@ -1,7 +1,7 @@
 <div class="main_contents">
     <% @posts.each do |post| %>
         <div class="js-modal-open">
-          <a><%= link_to post.title, post_path(post), remote: true %></a>
+          <a><%= link_to post.title, post_path(post), remote: true, id: "js-post-title" %></a>
         </div>
   <% end %>
 </div>
@@ -10,7 +10,4 @@
   <div class="modal__bg js-modal-close"></div>
   <div id="modal__content">
   </div>
-  <a class="js-modal-close">閉じる</a>
 </div>
-
-<!-- html css のみでモーダルウィンドウを実装し、そこにコードを貼り付ける -->
