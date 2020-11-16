@@ -24,6 +24,5 @@ $(function(){
 
     $('.js-modal-close').on('click',function(){
       $('.js-modal').fadeOut();
-      $('#modal__content').replace("<%= j(render partial: 'posts/modal', locals: {post: @post}) %>", ""); 
     });   
 });
