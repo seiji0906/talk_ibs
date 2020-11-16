@@ -1,7 +1,10 @@
 <h1>create post</h1>
 
-<%= form_with(model: @post, local: true) do |form| %>
-
+<%= form_with(model: @post) do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
 
   <div>
     <%= form.label :body %>
