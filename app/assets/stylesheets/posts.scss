@@ -24,7 +24,7 @@
   width: 100%;
 }
 #modal__content{
-  border: solid 1px #000000;
+  /*border: solid 1px #000000;*/
   box-shadow: 0 10px 25px 0 rgba(0, 194, 235, 0.5);
   box-sizing: border-box;
   background: #fff;
@@ -34,6 +34,9 @@
   top: 50%;
   transform: translate(-50%,-50%);
   width: 60%;
+  overflow: scroll;
+  max-width: 70%;
+  max-height: 60%;
 }
 
 .js-modal-open {
