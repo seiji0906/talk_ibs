@@ -1,15 +1,16 @@
 <div class="main_contents">
     <% @posts.each do |post| %>
-        <div class="post_contents">
-          <p><%= User.find(post.user_id).username %></p>
-          <p><%= link_to post.title, post_path(post.id) %></p>
-          <%= post.body %>
-
-         <!-- ↓追加(部分的に更新したい場所)↓ -->
-          <div id="likes_buttons_<%= post.id %>">
-             <%= render partial: 'likes/like', locals: { post: post} %>
-          </div>
-         <!-- ↑ここまで↑ -->
+        <div class="js-modal-open">
+          <a><%= link_to post.title, post_path(post), remote: true %></a>
         </div>
   <% end %>
 </div>
+
+<div class="js-modal">
+  <div class="modal__bg js-modal-close"></div>
+  <div id="modal__content">
+  </div>
+  <a class="js-modal-close">閉じる</a>
+</div>
+
+<!-- html css のみでモーダルウィンドウを実装し、そこにコードを貼り付ける -->
