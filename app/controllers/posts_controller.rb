@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   # def index
   #   @posts = Post.where(user_id: current_user.id).all
   # end
