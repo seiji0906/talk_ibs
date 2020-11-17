@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-  def index
-    @posts = Post.where(user_id: current_user.id).all
-  end
+  # def index
+  #   @posts = Post.where(user_id: current_user.id).all
+  # end
 
   def show
     @post = Post.find(params[:id])
@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(posts_params)
     @post.user_id = current_user.id
-    @posts = Post.all
+    @posts = Post.all.order(id: "DESC")
     @post.save
   end
 
