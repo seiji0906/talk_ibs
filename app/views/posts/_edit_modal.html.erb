@@ -1,11 +1,11 @@
 <%= form_with(model: @post) do |form| %>
 
   <div>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, placeholder: "タイトル", maxlength: "100" %>
   </div>
 
   <div>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, placeholder: "内容", maxlength: "1000" %>
   </div>
   <div>
     <%= form.submit %>

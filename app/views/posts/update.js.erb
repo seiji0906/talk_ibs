@@ -1,5 +1,6 @@
 $(function(){
-    $('#js-post-title-<%= @post.id %>').html("<%= @post.title %>");
+    $('#js-post-title-<%= @post.id %>').html("<%= j(link_to @post.title, post_path(@post), remote: true, class: "js-modal-open") %>");
+    
     $('#modal__content').html("<%= j(render partial: 'posts/show_modal', locals: {post: @post}) %>");
     $('.js-modal').fadeIn();
 
