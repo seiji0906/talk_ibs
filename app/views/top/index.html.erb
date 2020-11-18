@@ -1,5 +1,10 @@
 <div>
-  <li><%= link_to "作成", new_post_path, remote: true, class: "scroll-button" %></li>
+  <% if user_signed_in? %>
+    <li><%= link_to "作成", new_post_path, remote: true, class: "scroll-button" %></li>
+  <% else %>
+    <li><%= link_to "作成", new_user_session_path, class: "scroll-button", data: { confirm: "ログイン画面に進みますか？" } %></li>
+  <% end %>
+
   <li><%= render 'users/login' %></li>
 </div>
 

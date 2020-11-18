@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
-  # def index
-  #   @posts = Post.where(user_id: current_user.id).all
-  # end
+  def index
+    @posts = Post.all.order(id: "DESC")
+  end
 
   def show
     @post = Post.find(params[:id])

@@ -45,3 +45,31 @@ textarea {
   background-size: 100% auto;
   display: inline;
 }
+
+#scroll_to_top {
+  /* 「TOPに戻る」ボタンにカーソルを載せた時に、
+  カーソルが指のマークになるようにしています。 */
+
+  /* 常にページの右下に表示されるように固定します。 */
+  position: fixed;  /* 位置を固定させます。 */
+  bottom: 5%;
+  right: 5%;
+
+}
+/*#scroll_to_top.button {
+   「TOPに戻る」ボタンのデザインを整えています。 
+  padding: 0 15px;
+  font-size: 15px;
+  display: inline-block;
+  border: 1px solid #999;
+  border-radius: 1em;
+  background-color: #eee;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, .3);
+  cursor: pointer;
+}*/
+
+/*#scroll_to_top.button:hover {
+  -webkit-transform: translate(0, -2px);
+  transform: translate(0, -2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .4);
+}*/
