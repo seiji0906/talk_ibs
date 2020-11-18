@@ -1,0 +1,13 @@
+<%= form_with(model: @comment) do |form| %>
+  <div>
+    <%= form.text_area :body, placeholder: "コメント", maxlength: "200" %>
+  </div>
+
+  <div>
+    <%= form.hidden_field :post_id, :value => params[:post_id] %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
