@@ -26,7 +26,13 @@
     <i class="fas fa-user"></i>
     <%= link_to "#{User.find(comment.user_id).username}", user_path(comment.user_id), remote: true %>
   </p>
-  <%= comment.body %></br>
+  <%= comment.body %>
+  <% if user_signed_in? %>
+    <% if current_user.id == comment.user_id %>
+      <%= link_to "コメントを編集", edit_comment_path(comment), remote: true %>
+      <%= link_to "削除", "comments/#{comment.id}", data: { confirm: "削除しますか？", remote: true }, method: :delete %>
+    <% end %>
+  <% end %>
 </br>
 <% end %>
 

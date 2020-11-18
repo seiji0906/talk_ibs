@@ -1,0 +1,8 @@
+$(function(){
+    $('#modal__content').html("<%= j(render partial: 'comments/edit', locals: {comment: @comment}) %>");
+    $('.js-modal').fadeIn();
+
+    $('.js-modal-close').on('click',function(){
+      $('.js-modal').fadeOut();
+    });   
+});
