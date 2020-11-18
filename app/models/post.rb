@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  validates :title, length: { in: 1..100 }
+  validates :title, length: { in: 1..50 }
   validates :body, length: { in: 1..1000 }
   belongs_to :user
   has_many :likes, dependent: :destroy
