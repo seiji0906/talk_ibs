@@ -1,3 +1,5 @@
+<%= render partial: 'posts/show_modal', locals: { post: @post} %>
+
 <%= form_with(model: @comment) do |form| %>
   <div>
     <%= form.text_area :body, placeholder: "コメント", maxlength: "200" %>

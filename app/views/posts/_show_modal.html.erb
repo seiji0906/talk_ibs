@@ -22,7 +22,10 @@
 <% end %>
 
 <% @comments.each do |comment| %>
-  <%= User.find(comment.user_id).username %></br>
+  <p>
+    <i class="fas fa-user"></i>
+    <%= link_to "#{User.find(comment.user_id).username}", user_path(comment.user_id), remote: true %>
+  </p>
   <%= comment.body %></br>
 </br>
 <% end %>
