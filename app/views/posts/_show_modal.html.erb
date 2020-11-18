@@ -1,6 +1,11 @@
 <p><%= @post.title %></p>
 <p><%= @post.body %></p>
 
+<p>
+  <i class="fas fa-user"></i>
+  <%= link_to "#{@post.user.username}", user_path(@post.user_id), remote: true %>さんの投稿を見る
+</p>
+
 <div id="likes_buttons_<%= @post.id %>">
    <%= render partial: 'likes/like', locals: { post: @post} %>
 </div>

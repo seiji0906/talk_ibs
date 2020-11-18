@@ -1,4 +1,7 @@
-<%= link_to "作成", new_post_path, remote: true, class: "scroll-button" %>
+<div>
+  <li><%= link_to "作成", new_post_path, remote: true, class: "scroll-button" %></li>
+  <li><%= render 'users/login' %></li>
+</div>
 
 <div id="main_contents">
   <%= render partial: 'posts/post' %>

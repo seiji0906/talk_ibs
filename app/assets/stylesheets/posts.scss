@@ -84,6 +84,14 @@
     color: #fff;
     box-shadow: 0 8px 15px rgba(0, 0, 0, .4);
   }
+
+  .to_root {
+    position: fixed;
+  }
+
+  .scroll {
+    position: fixed;
+  }
 }
 
 @media (max-width: 800px) {
@@ -167,5 +175,28 @@
     color: #fff;
     box-shadow: 0 8px 15px rgba(0, 0, 0, .4);
   }
+
+  .to_root {
+    position: fixed;
+    top: 12%;
+  }
+
+  .scroll {
+    position: fixed;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

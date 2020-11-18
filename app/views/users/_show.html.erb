@@ -1,0 +1,7 @@
+<% @posts.each do |post| %>
+    <div id="js-post-title-<%= post.id %>">
+      <%= link_to post.title, post_path(post), remote: true, class: "js-modal-open" %>
+    </div>
+<% end %>
+
+<p><%= button_to "一覧に戻る", root_path, class: "to_root", method: :get, remote: true %></p>
