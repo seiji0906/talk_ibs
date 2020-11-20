@@ -54,7 +54,7 @@ textarea {
   position: fixed;  /* 位置を固定させます。 */
   bottom: 5%;
   right: 5%;
-
+  cursor: pointer;
 }
 /*#scroll_to_top.button {
    「TOPに戻る」ボタンのデザインを整えています。 
