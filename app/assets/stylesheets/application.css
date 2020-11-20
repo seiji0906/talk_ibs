@@ -56,6 +56,14 @@ textarea {
   right: 5%;
   cursor: pointer;
 }
+
+ul.skill-list {
+  padding: 0;
+}
+
+nav.pagination {
+  display: none;
+}
 /*#scroll_to_top.button {
    「TOPに戻る」ボタンのデザインを整えています。 
   padding: 0 15px;

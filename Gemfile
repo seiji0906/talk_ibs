@@ -64,4 +64,5 @@ gem 'rails_admin', '~> 2.0'
 
 gem 'devise'
 
+gem 'kaminari'
 

@@ -1,5 +1,8 @@
-<% @posts.each do |post| %>
-    <div id="js-post-title-<%= post.id %>">
-      <%= link_to post.title, post_path(post), remote: true, class: "js-modal-open" %>
-    </div>
-<% end %>
+<ul class="skill-list jscroll">
+  <% @posts.each do |post| %>
+      <div id="js-post-title-<%= post.id %>">
+        <li><%= link_to post.title, post_path(post), remote: true, class: "js-modal-open" %></li>
+      </div>
+  <% end %>
+  <%= paginate @posts %>
+</ul>
