@@ -1,5 +1,5 @@
 class TopController < ApplicationController
   def index
-    @posts = Post.all.order(id: "DESC").page(params[:page]).per(5)
+    @posts = Post.all.order(id: "DESC").page(params[:page]).per(10)
   end
 end

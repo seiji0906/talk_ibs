@@ -28,6 +28,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     @post.update(posts_params)
+    @comments = Comment.where(post_id: @post.id)
   end
 
   def destroy
