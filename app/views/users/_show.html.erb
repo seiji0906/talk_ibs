@@ -1,7 +1,10 @@
-<% @posts.each do |post| %>
-    <div id="js-post-title-<%= post.id %>">
-      <%= link_to post.title, post_path(post), remote: true, class: "js-modal-open" %>
-    </div>
-<% end %>
+<ul class="skill-list jscroll">
+  <% @posts.each do |post| %>
+      <div id="js-post-title-<%= post.id %>">
+        <li><%= link_to post.title, post_path(post), remote: true, class: "js-modal-open" %></li>
+      </div>
+  <% end %>
+  <%= paginate @posts %>
+</ul>
 
-<p><%= button_to "一覧に戻る", posts_path, class: "to_root", method: :get, remote: true %></p>
+<p><%= button_to "一覧に戻る", root_path, class: "to_root", method: :get %></p>
