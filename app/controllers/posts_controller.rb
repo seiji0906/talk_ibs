@@ -17,8 +17,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(posts_params)
     @post.user_id = current_user.id
-    @posts = Post.all.order(id: "DESC")
     @post.save
+    @posts = Post.all.order(id: "DESC").page(params[:page]).per(10)
   end
 
   def edit
