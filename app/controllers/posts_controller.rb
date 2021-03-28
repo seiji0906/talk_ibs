@@ -19,6 +19,7 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
     @post.save
     @posts = Post.all.order(id: "DESC").page(params[:page]).per(10)
+
   end
 
   def edit
