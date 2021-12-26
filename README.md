@@ -1,24 +1,5 @@
-# README
+IBS（過敏性腸症候群）の人が悩みを投稿するサービス
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ページ遷移はなし
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+全て非同期通信
